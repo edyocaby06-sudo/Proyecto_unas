@@ -14,8 +14,7 @@ mongoose.connect(mongoURI)
         console.log("⚠️ AVISO: MongoDB Atlas no pudo conectar (bloqueo de antivirus).");
         console.log("ℹ️ El servidor seguirá funcionando en modo local para la evidencia.");
     });
-
-app.post("/", (req, res) => {
+app.post("/citas", (req, res) => {
     const datos = req.body;
     console.log("📩 Datos de cita recibidos:", datos);
     res.status(201).json({
